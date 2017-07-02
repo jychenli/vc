@@ -7,6 +7,23 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>VC Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <finalName>vc</finalName>
+    <plugins>
+    	<plugin>  
+    		<groupId>org.apache.felix</groupId>  
+    		<artifactId>maven-bundle-plugin</artifactId>  
+    		<extensions>true</extensions>  
+		</plugin>
+    </plugins>
+  </build>
+  
   <dependencies>
   
     <!-- mina  -->
@@ -14,7 +31,16 @@
 	    <groupId>org.apache.mina</groupId>
 	    <artifactId>mina-core</artifactId>
 	    <version>2.0.16</version>
+	    <type>bundle</type>  
+    	<scope>compile</scope>  
 	</dependency>
+	
+	<dependency>
+    	<groupId>org.apache.mina</groupId>
+    	<artifactId>mina-integration-beans</artifactId>
+    	<version>2.0.16</version>
+	</dependency>
+	
 	
   	<!-- spring  -->
   	<dependency>
@@ -23,16 +49,27 @@
         <version>4.3.9.RELEASE</version>
     </dependency>
     
+    <!-- spring  -->
+  	<dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>4.3.9.RELEASE</version>
+    </dependency>
+    
+    
+
     <!-- junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
     
+    
   </dependencies>
-  <build>
-    <finalName>vc</finalName>
-  </build>
+  
+  
+  
+
 </project>
