@@ -7,7 +7,7 @@ import net.qiujuer.blink.core.listener.SendListener;
 import java.io.File;
 import java.io.IOException;
 
-import cc.chli.vc.server.CallBack;
+import cc.chli.vc.handler.CallBack;
 import cc.chli.vc.util.ServerUtils;
 
 /**

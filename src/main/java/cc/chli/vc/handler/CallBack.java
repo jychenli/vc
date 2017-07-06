@@ -1,4 +1,4 @@
-package cc.chli.vc.server;
+package cc.chli.vc.handler;
 
 import net.qiujuer.blink.box.ByteReceivePacket;
 import net.qiujuer.blink.box.FileReceivePacket;
