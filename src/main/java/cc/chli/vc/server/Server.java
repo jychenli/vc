@@ -15,13 +15,16 @@ import cc.chli.vc.util.ServerUtils;
  */
 public class Server {
 	
-	private static Logger log = Logger.getLogger(Server.class);  
 	
-	public Server(){
+	private BlinkServer accept;
+	
+	private static Logger log = Logger.getLogger(Server.class);
+	
+	public void initialize(){
 		try{
 			final CallBack callBack = new CallBack();
 	
-	        BlinkServer accept = new BlinkServer(new BlinkServer.ServerListener() {
+	         accept = new BlinkServer(new BlinkServer.ServerListener() {
 	            @Override
 	            public void onConnectClosed(Connector connector) {
 	                System.out.println("onConnectClosed:" + connector.getId());
@@ -34,6 +37,8 @@ public class Server {
 	            }
 	        });
 	        accept.bind(2626);
+	        
+	        
 	
 	        log.info("server start.....");
 	        //ServerUtils.readKey();
@@ -42,6 +47,12 @@ public class Server {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+	}
+	
+	
+	public void destroy(){
+		if(accept!=null && accept.isAlive())
+		accept.dispose();
 	}
     
 }

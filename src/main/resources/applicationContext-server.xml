@@ -6,5 +6,5 @@
         
   
     
-    <bean id="server" class="cc.chli.vc.server.Server" />
+    <bean id="server" class="cc.chli.vc.server.Server"  init-method="initialize" destroy-method="destroy" />
 </beans>
