@@ -33,6 +33,12 @@ public class JsonUtils {
     private JsonUtils() {
     }
 
+    /**
+     * 序列化成 json string
+     * 
+     * @param obj
+     * @return
+     */
     public static String encode(Object obj) {
         try {
             return objectMapper.writeValueAsString(obj);
@@ -45,6 +51,7 @@ public class JsonUtils {
         }
         return null;
     }
+    
 
     /**
      * 将json string反序列化成对象
