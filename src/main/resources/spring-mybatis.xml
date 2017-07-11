@@ -12,18 +12,29 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd
          http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd" >
         
-  	<context:property-placeholder location="classpath:jdbc.properties"/><!-- 加载配置文件 --> 
+  
+	
+  	 <context:property-placeholder location="classpath:jdbc.properties" ignore-unresolvable="true"/>
     
      <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"  
         destroy-method="close">  
-        <property name="driverClassName" value="${driver}" />  
-        <property name="url" value="${url}" />  
-        <property name="username" value="${username}" />  
-        <property name="password" value="${password}" />  
-     
-       
+        <property name="driverClassName" value="${connection.driver}" />  
+        <property name="url" value="${connection.url}" />  
+        <property name="username" value="${connection.username}" />  
+        <property name="password" value="${connection.password}" />  
+     	
+     	<property name="initialSize" value="${connection.initialSize}" /><!-- 初始化连接个数 -->
+       	<property name="maxActive" value="${connection.maxActive}" /><!-- 连接池的最大活动个数 -->
+		<property name="maxIdle" value="${connection.maxIdle}" /><!-- 最大空闲数 -->
+		<property name="maxWait" value="${connection.maxWait}"/><!-- 连接的最大等待时间,单位为毫秒 -->		
+
+		<property name="logAbandoned" value="true"/>
+		<property name="removeAbandoned" value="true"/>
+		<property name="removeAbandonedTimeout" value="7200"/>
+		<property name="testOnBorrow" value="true"/>
+		<property name="validationQuery" value="SELECT 1"/>
     </bean>  
     
     
@@ -43,8 +54,9 @@
         basePackage:指定sql映射文件/接口所在的包（自动扫描）  
     -->  
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-        <property name="basePackage" value="cc.chli.vc.mapper"></property>  
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
+        <property name="basePackage" value="cc.chli.vc.mapper"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />  
+      
     </bean>  
   
     <!-- 
