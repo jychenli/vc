@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <classPathEntry location="D:\repositories\maven\mysql\mysql-connector-java\5.1.42\mysql-connector-java-5.1.42.jar" />
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:mysql://139.224.165.42:3306/vc?useUnicode=true&amp;characterEncoding=UTF-8" driverClass="com.mysql.jdbc.Driver" password="OAT0ZXLJj6RZpu0W" userId="tomcat"  />
+    <javaModelGenerator targetPackage="cc.chli.vc.model" targetProject="vc" />
+    <sqlMapGenerator targetPackage="cc.chli.vc.mapper" targetProject="vc" />
+    <javaClientGenerator type="XMLMAPPER" targetPackage="cc.chli.vc.dao" targetProject="vc"></javaClientGenerator>
+    <table schema="MessageLog" tableName="message_log">
+      <columnOverride column="id" property="id" />
+      <columnOverride column="type" property="type" />
+      <columnOverride column="content" property="content" />
+      <columnOverride column="time" property="time" />
+      <columnOverride column="ip" property="ip" />
+    </table>
+  </context>
+</generatorConfiguration>
