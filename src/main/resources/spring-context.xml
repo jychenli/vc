@@ -202,7 +202,8 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd 
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:component-scan base-package="cc.chli.vc.service" />  
+    <context:component-scan base-package="cc.chli.vc.service" /> 
+  
     <import resource="spring-profile.xml"/>
     <import resource="spring-mybatis.xml"/>
  	<import resource="spring-server.xml"/>
