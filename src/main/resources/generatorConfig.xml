@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-  <classPathEntry location="D:\repositories\maven\mysql\mysql-connector-java\5.1.42\mysql-connector-java-5.1.42.jar" />
+  <classPathEntry location="C:\Users\james\.m2\repository\mysql\mysql-connector-java\5.1.42\mysql-connector-java-5.1.42.jar" />
   <context id="context1">
     <jdbcConnection connectionURL="jdbc:mysql://139.224.165.42:3306/vc?useUnicode=true&amp;characterEncoding=UTF-8" driverClass="com.mysql.jdbc.Driver" password="OAT0ZXLJj6RZpu0W" userId="tomcat"  />
     <javaModelGenerator targetPackage="cc.chli.vc.model" targetProject="vc" />
@@ -14,5 +14,18 @@
       <columnOverride column="time" property="time" />
       <columnOverride column="ip" property="ip" />
     </table>
+    
+     <table schema="User" tableName="user">
+     </table>
+     
+      <table schema="Alliance" tableName="alliance">
+     </table>
+      <table schema="AllianceMember" tableName="alliance_member">
+     </table>
+      <table schema="Permissions" tableName="permissions">
+     </table>
+      <table schema="PermissionsGroup" tableName="permissions_group">
+     </table>
+     
   </context>
 </generatorConfiguration>

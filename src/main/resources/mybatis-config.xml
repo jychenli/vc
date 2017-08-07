@@ -6,6 +6,6 @@
         <setting name="logImpl" value="LOG4J" />
 	</settings>
 	 <mappers>
-            <mapper resource="cc/chli/vc/mapper/MessageLogMapper.xml" />
-        </mappers>   
+            <package name="cc.chli.vc.mapper" />
+     </mappers>   
 </configuration>

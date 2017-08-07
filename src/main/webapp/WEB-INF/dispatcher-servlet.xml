@@ -8,7 +8,9 @@
         http://www.springframework.org/schema/context/spring-context.xsd
           http://www.springframework.org/schema/mvc 
           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
+          
+	<mvc:annotation-driven />
+	
 	<!-- 使用Annotation自动注册Bean,只扫描@Controller -->
 	<context:component-scan base-package="cc.chli.vc.controller" />
 
@@ -23,7 +25,7 @@
 	</bean>
 
 	<!-- 静态资源映射 -->
-    <mvc:resources mapping="/static/**" location="/WEB-INF/static/" cache-period="31536000"/>
+    <mvc:resources mapping="/static/**" location="/WEB-INF/static/" cache-period="-1"/>
     
 	<mvc:view-controller path="/" view-name="login" />
 

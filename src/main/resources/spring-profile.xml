@@ -12,19 +12,19 @@
     <!-- 开发环境配置文件 -->
     <beans profile="development">
         <context:property-placeholder
-            location="classpath*:development/*.properties" />
+            location="classpath*:development/*.properties,classpath*:resources.properties" />
     </beans>
 
     <!-- 测试环境配置文件 -->
     <beans profile="test">
         <context:property-placeholder
-            location="classpath*:test/*.properties" />
+            location="classpath*:test/*.properties,classpath*:resources.properties" />
     </beans>
     
     <!-- 生产环境配置文件 -->
     <beans profile="production">
         <context:property-placeholder
-            location="classpath*:production/*.properties" />
+            location="classpath*:production/*.properties,classpath*:resources.properties" />
     </beans>
       
 </beans>
