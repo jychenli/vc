@@ -3,6 +3,8 @@ package cc.chli.vc.test.service;
 import java.util.Date;
 
 
+
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +12,10 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import cc.chli.vc.constants.MessageType;
+import cc.chli.vc.common.constants.MessageType;
+import cc.chli.vc.common.util.StringUtilsExtend;
 import cc.chli.vc.model.MessageLog;
 import cc.chli.vc.service.MessageLogService;
-import cc.chli.vc.util.StringUtilsExtend;
 
 @RunWith(SpringJUnit4ClassRunner.class)  
 @ContextConfiguration(locations={"classpath:spring-context.xml"})

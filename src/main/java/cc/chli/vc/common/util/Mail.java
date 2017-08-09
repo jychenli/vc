@@ -1,4 +1,4 @@
-package cc.chli.vc.util;
+package cc.chli.vc.common.util;
 
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;

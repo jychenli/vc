@@ -105,14 +105,13 @@
     <!-- Shiro的Web过滤器 -->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
-        <property name="loginUrl" value="/user/login"/>
+        <property name="loginUrl" value="/sys/login"/>
         <property name="filterChainDefinitions">
             <value>
-                /user/login = anon
-                /jCaptcha.jpg = anon
-                /user/register = anon
+                /sys/login = anon
+                /static/** = anon
+                /sys/jCaptcha.jpg = anon
                 /** = user
-
             </value>
         </property>
     </bean>

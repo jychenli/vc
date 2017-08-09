@@ -25,7 +25,7 @@ public class UserRealm extends AuthorizingRealm {
 
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         Set<String> permissions = userService.findPermissions(username);
-        permissions.forEach(item->System.out.println(item));
+        //permissions.forEach(item->System.out.println(item));
         authorizationInfo.setStringPermissions(permissions);
         return authorizationInfo;
     }

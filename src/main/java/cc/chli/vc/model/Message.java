@@ -4,7 +4,7 @@ import java.util.Date;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
 
-import cc.chli.vc.constants.MessageType;
+import cc.chli.vc.common.constants.MessageType;
 import net.qiujuer.blink.core.Connector;
 
 public class Message {

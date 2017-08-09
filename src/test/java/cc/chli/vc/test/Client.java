@@ -6,12 +6,14 @@ import java.io.IOException;
 import java.util.Date;
 
 
-import cc.chli.vc.constants.MessageType;
+
+
+import cc.chli.vc.common.constants.MessageType;
+import cc.chli.vc.common.util.JsonUtils;
+import cc.chli.vc.common.util.ServerUtils;
+import cc.chli.vc.common.util.StringUtilsExtend;
 import cc.chli.vc.handler.CallBack;
 import cc.chli.vc.model.Message;
-import cc.chli.vc.util.JsonUtils;
-import cc.chli.vc.util.ServerUtils;
-import cc.chli.vc.util.StringUtilsExtend;
 
 /**
  * Blink Client

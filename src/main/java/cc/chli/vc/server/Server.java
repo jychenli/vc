@@ -7,8 +7,8 @@ import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
+import cc.chli.vc.common.util.ServerUtils;
 import cc.chli.vc.handler.CallBack;
-import cc.chli.vc.util.ServerUtils;
 
 /**
  * Test Server

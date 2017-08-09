@@ -46,6 +46,9 @@
 								<div class="form-group">
 									<input class="form-control" placeholder="Password" name='j_password' type="password" value="">
 								</div>
+								<div class="form-group">
+									<img alt="" src="">
+								</div>
 
 								<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
 

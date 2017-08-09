@@ -1,4 +1,4 @@
-package cc.chli.vc.util;
+package cc.chli.vc.common.util;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package cc.chli.vc.constants;
+package cc.chli.vc.common.constants;
 
 import org.codehaus.jackson.annotate.JsonValue;
 
