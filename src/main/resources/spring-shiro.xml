@@ -30,7 +30,18 @@
     </bean>
     
 
-    
+      <!-- 验证码生产-->
+    <bean id="cacheCaptchaStore" class="cc.chli.vc.common.jcptcha.CacheCaptchaStore">
+        <constructor-arg ref="cacheManager"/>
+    </bean>
+    <bean id="gMailEngine" class="cc.chli.vc.common.jcptcha.GMailEngine"/>
+    <bean id="captchaService" class="com.octo.captcha.service.image.DefaultManageableImageCaptchaService">
+        <constructor-arg index="0" ref="cacheCaptchaStore"/>
+        <constructor-arg index="1" ref="gMailEngine"/>
+        <constructor-arg index="2" value="180"/>
+        <constructor-arg index="3" value="100000"/>
+        <constructor-arg index="4" value="75000"/>
+    </bean>
    
     <!-- Realm实现 -->
     <bean id="userRealm" class="cc.chli.vc.common.security.UserRealm">

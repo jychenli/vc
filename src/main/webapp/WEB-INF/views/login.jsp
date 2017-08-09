@@ -47,7 +47,7 @@
 									<input class="form-control" placeholder="Password" name='j_password' type="password" value="">
 								</div>
 								<div class="form-group">
-									<img alt="" src="">
+									<img src="${pageContext.request.contextPath}/sys/jCaptcha.jpg" width="120px" height="30px"/>
 								</div>
 
 								<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
