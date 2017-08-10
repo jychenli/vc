@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" isELIgnored="false"%>
+	pageEncoding="UTF-8" isELIgnored="false" import="java.util.Date"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -11,6 +12,8 @@
 <title>Login</title>
 <link rel="stylesheet"
 	href="${ctxStatic}/bootstrap-3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="${ctxStatic}/common/css/style.css?d=<%=new Date().getTime()%>">
 </head>
 <body>
 
@@ -36,18 +39,18 @@
 								<spring:message code="AbstractUserDetailsAuthenticationProvider.badCredentials"></spring:message><br />
 							</div>
 						</c:if>
-						<form action="<c:url value="/main"></c:url>" method="post">
+						<form action="<c:url value="/user/login"></c:url>" method="post">
 							<fieldset>
 								<div class="form-group">
 									<input class="form-control" placeholder="User Name"
-										name='j_username' type="text">
+										name='username' type="text">
 								</div>
 
 								<div class="form-group">
-									<input class="form-control" placeholder="Password" name='j_password' type="password" value="">
+									<input class="form-control" placeholder="Password" name='password' type="password" value="">
 								</div>
 								<div class="form-group">
-									<img src="${pageContext.request.contextPath}/sys/jCaptcha.jpg" width="120px" height="30px"/>
+									<input class="form-control width-55 inline" id="captcha" /><img src="${pageContext.request.contextPath}/sys/jCaptcha.jpg" width="120px" height="34px"/>
 								</div>
 
 								<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">

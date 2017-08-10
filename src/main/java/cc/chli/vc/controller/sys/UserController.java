@@ -1,5 +1,6 @@
 package cc.chli.vc.controller.sys;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ public class UserController extends BaseController{
 	
 	@RequestMapping(value = "/login",method=RequestMethod.POST)
 	public String checkLogin(Model model) {
-		return "";
+		System.out.println("sss");
+		return "main";
 	}
 }

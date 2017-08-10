@@ -120,6 +120,7 @@
         <property name="filterChainDefinitions">
             <value>
                 /sys/login = anon
+                /user/login = anon
                 /static/** = anon
                 /sys/jCaptcha.jpg = anon
                 /** = user
