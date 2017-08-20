@@ -70,7 +70,7 @@ public class BlinkServer extends Thread implements Disposable {
                         ServerConnect connect = new ServerConnect();
 
                         // Listener
-                        onConnectCreated(connect);
+                       
 
                         connect.setGlobeDelivery(mDelivery);
                         connect.start(channel);
@@ -78,7 +78,7 @@ public class BlinkServer extends Thread implements Disposable {
                         synchronized (mConnectors) {
                             mConnectors.add(connect);
                         }
-
+                        onConnectCreated(connect);
                     }
                 }
             } catch (Exception e) {

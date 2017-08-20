@@ -1,13 +1,15 @@
 package cc.chli.vc.server;
 
+import net.qiujuer.blink.BlinkConnect;
 import net.qiujuer.blink.BlinkServer;
+import net.qiujuer.blink.box.StringSendPacket;
 import net.qiujuer.blink.core.Connector;
 
 import java.io.IOException;
 
 import org.apache.log4j.Logger;
 
-import cc.chli.vc.common.util.ServerUtils;
+
 import cc.chli.vc.handler.CallBack;
 
 /**
@@ -34,13 +36,23 @@ public class Server {
 	            public void onConnectCreated(Connector connector) {
 	                connector.setReceiveListener(callBack);
 	                System.out.println("onConnectCreated:" + connector.getId());
+	               
+	                //BlinkConnect conn = (BlinkConnect)connector;
+	             /*   try{
+	                StringSendPacket entity = new StringSendPacket("ssss", null);
+	                    connector.send(entity);
+	                }catch(Exception ex){
+	                	ex.printStackTrace();
+	                }*/
+	                accept.getConnectors().get(0).send("ssss");
+	                
 	            }
 	        });
 	        accept.bind(2626);
 	        
 	        
 	
-	        log.info("server start.....");
+	        log.debug("server start.....");
 	        //ServerUtils.readKey();
 	
 	        //accept.dispose();
